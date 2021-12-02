@@ -15,7 +15,6 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
-        
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellId)
     }
     
