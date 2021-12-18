@@ -15,7 +15,7 @@ class AppRowCell: UICollectionViewCell {
     
     let companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 13))
     
-    let getButton = UIButton(title: "Get")
+    let getButton = UIButton(title: "GET")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
