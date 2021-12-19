@@ -11,9 +11,9 @@ class AppRowCell: UICollectionViewCell {
     
     let imageView = UIImageView(cornerRadius: 8)
     
-    let nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 20))
+    var nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 20))
     
-    let companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 13))
+    var companyLabel = UILabel(text: "Company Name", font: .systemFont(ofSize: 13))
     
     let getButton = UIButton(title: "GET")
     
