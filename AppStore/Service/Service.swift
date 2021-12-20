@@ -70,7 +70,28 @@ class Service {
                     
             } catch {
                 completion(nil, error)
-                //print("Failed: \(error)")
+            }
+        }.resume()
+    }
+    
+    func fetchSocialApps(completion: @escaping ([SocialApp]?, Error?) -> Void) {
+        let urlString = "https://api.letsbuildthatapp.com/appstore/social"
+        guard let url = URL(string: urlString) else { return }
+
+        URLSession.shared.dataTask(with: url) { data, response, err in
+            
+            if let err = err {
+                completion(nil, err)
+                return
+            }
+            
+            do {
+                let objects = try JSONDecoder().decode([SocialApp].self, from: data!)
+                //objects.feed.results.forEach { print($0.name) }
+                completion(objects, nil)
+                    
+            } catch {
+                completion(nil, error)
             }
         }.resume()
     }

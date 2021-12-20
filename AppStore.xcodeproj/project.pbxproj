@@ -23,6 +23,7 @@
 		431949D4276E39470023AB63 /* AppsHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D3276E39470023AB63 /* AppsHeaderHorizontalController.swift */; };
 		431949D6276E3CBB0023AB63 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D5276E3CBB0023AB63 /* AppsHeaderCell.swift */; };
 		431949D8276E4AD00023AB63 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D7276E4AD00023AB63 /* AppGroup.swift */; };
+		431949DA277105440023AB63 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D9277105440023AB63 /* SocialApp.swift */; };
 		43C2738B274988A80044B67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738A274988A80044B67E /* AppDelegate.swift */; };
 		43C2738D274988A80044B67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738C274988A80044B67E /* SceneDelegate.swift */; };
 		43C2738F274988A80044B67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738E274988A80044B67E /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		431949D3276E39470023AB63 /* AppsHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalController.swift; sourceTree = "<group>"; };
 		431949D5276E3CBB0023AB63 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		431949D7276E4AD00023AB63 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		431949D9277105440023AB63 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		43C27387274988A80044B67E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2738A274988A80044B67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C2738C274988A80044B67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				431949BD2769154D0023AB63 /* SearchResult.swift */,
 				431949D7276E4AD00023AB63 /* AppGroup.swift */,
+				431949D9277105440023AB63 /* SocialApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4319488F2758C2DB0023AB63 /* UIView+Layout.swift in Sources */,
+				431949DA277105440023AB63 /* SocialApp.swift in Sources */,
 				431949C4276DF0BE0023AB63 /* AppsPageController.swift in Sources */,
 				431949BE2769154D0023AB63 /* SearchResult.swift in Sources */,
 				43C273BB2749899A0044B67E /* BaseTabBarController.swift in Sources */,
