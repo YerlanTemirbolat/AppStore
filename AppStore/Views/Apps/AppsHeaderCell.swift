@@ -9,8 +9,8 @@ import UIKit
 
 class AppsHeaderCell: UICollectionViewCell {
     
-    let companyLabel = UILabel(text: "Facebook", font: .boldSystemFont(ofSize: 12))
-    let titleLabel = UILabel(text: "Keeping up with friends is faster than ever", font: .systemFont(ofSize: 24))
+    let companyLabel = UILabel(text: "Facebook", font: .boldSystemFont(ofSize: 12), numberOfLines: 0)
+    let titleLabel = UILabel(text: "Keeping up with friends is faster than ever", font: .systemFont(ofSize: 24), numberOfLines: 0)
     let imageView = UIImageView(cornerRadius: 8)
     
     override init(frame: CGRect) {

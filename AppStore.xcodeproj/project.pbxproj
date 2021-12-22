@@ -24,6 +24,10 @@
 		431949D6276E3CBB0023AB63 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D5276E3CBB0023AB63 /* AppsHeaderCell.swift */; };
 		431949D8276E4AD00023AB63 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D7276E4AD00023AB63 /* AppGroup.swift */; };
 		431949DA277105440023AB63 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949D9277105440023AB63 /* SocialApp.swift */; };
+		431949DC27722FE70023AB63 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949DB27722FE70023AB63 /* HorizontalSnappingController.swift */; };
+		431949DE27723D3B0023AB63 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949DD27723D3B0023AB63 /* BetterSnappingLayout.swift */; };
+		431949E1277250D20023AB63 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949E0277250D20023AB63 /* AppDetailController.swift */; };
+		431949E42773377A0023AB63 /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949E3277337790023AB63 /* AppDetailCell.swift */; };
 		43C2738B274988A80044B67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738A274988A80044B67E /* AppDelegate.swift */; };
 		43C2738D274988A80044B67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738C274988A80044B67E /* SceneDelegate.swift */; };
 		43C2738F274988A80044B67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738E274988A80044B67E /* ViewController.swift */; };
@@ -75,6 +79,10 @@
 		431949D5276E3CBB0023AB63 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		431949D7276E4AD00023AB63 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		431949D9277105440023AB63 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
+		431949DB27722FE70023AB63 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
+		431949DD27723D3B0023AB63 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		431949E0277250D20023AB63 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		431949E3277337790023AB63 /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		43C27387274988A80044B67E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2738A274988A80044B67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C2738C274988A80044B67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 				4319488E2758C2DB0023AB63 /* UIView+Layout.swift */,
 				431948902758CD9A0023AB63 /* VerticalStackView.swift */,
 				431949CF276E23830023AB63 /* Extensions.swift */,
+				431949DD27723D3B0023AB63 /* BetterSnappingLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -178,9 +187,11 @@
 		431949C2276DF0A00023AB63 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				431949DF277250AE0023AB63 /* Details */,
 				431949C3276DF0BE0023AB63 /* AppsPageController.swift */,
 				431949CB276DFBA20023AB63 /* AppsHorizontalController.swift */,
 				431949D3276E39470023AB63 /* AppsHeaderHorizontalController.swift */,
+				431949DB27722FE70023AB63 /* HorizontalSnappingController.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -196,12 +207,29 @@
 		431949C8276DF5FF0023AB63 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				431949E2277337620023AB63 /* Details */,
 				431949C9276DF6210023AB63 /* AppsGroupCell.swift */,
 				431949CD276E222D0023AB63 /* AppRowCell.swift */,
 				431949D1276E35ED0023AB63 /* AppsPageHeader.swift */,
 				431949D5276E3CBB0023AB63 /* AppsHeaderCell.swift */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		431949DF277250AE0023AB63 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				431949E0277250D20023AB63 /* AppDetailController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		431949E2277337620023AB63 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				431949E3277337790023AB63 /* AppDetailCell.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		43C2737E274988A80044B67E = {
@@ -533,7 +561,10 @@
 				43C2738B274988A80044B67E /* AppDelegate.swift in Sources */,
 				431949CA276DF6210023AB63 /* AppsGroupCell.swift in Sources */,
 				431948872752D6460023AB63 /* AppsSearchController.swift in Sources */,
+				431949DC27722FE70023AB63 /* HorizontalSnappingController.swift in Sources */,
+				431949DE27723D3B0023AB63 /* BetterSnappingLayout.swift in Sources */,
 				431948912758CD9A0023AB63 /* VerticalStackView.swift in Sources */,
+				431949E1277250D20023AB63 /* AppDetailController.swift in Sources */,
 				431949C127691C9F0023AB63 /* Service.swift in Sources */,
 				431949D4276E39470023AB63 /* AppsHeaderHorizontalController.swift in Sources */,
 				431949D2276E35ED0023AB63 /* AppsPageHeader.swift in Sources */,
@@ -541,6 +572,7 @@
 				431949D0276E23830023AB63 /* Extensions.swift in Sources */,
 				431949C6276DF2000023AB63 /* BaseListController.swift in Sources */,
 				431949D8276E4AD00023AB63 /* AppGroup.swift in Sources */,
+				431949E42773377A0023AB63 /* AppDetailCell.swift in Sources */,
 				431949D6276E3CBB0023AB63 /* AppsHeaderCell.swift in Sources */,
 				431949CC276DFBA20023AB63 /* AppsHorizontalController.swift in Sources */,
 				43C2738D274988A80044B67E /* SceneDelegate.swift in Sources */,
