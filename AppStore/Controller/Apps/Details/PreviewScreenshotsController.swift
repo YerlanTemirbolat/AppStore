@@ -13,7 +13,7 @@ class PreviewScreenshotsController: HorizontalSnappingController, UICollectionVi
     
     var app: Result? {
         didSet {
-            collectionView.reloadData()
+            self.collectionView.reloadData()
         }
     }
     
