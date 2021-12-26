@@ -11,6 +11,12 @@ class ReviewsController: HorizontalSnappingController, UICollectionViewDelegateF
     
     let cellId = "cellId"
     
+    var reviews: Reviews? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(ReviewCell.self, forCellWithReuseIdentifier: cellId)
@@ -18,11 +24,14 @@ class ReviewsController: HorizontalSnappingController, UICollectionViewDelegateF
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return reviews?.feed.link.count ?? 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ReviewCell
+        let link = self.reviews?.feed.link[indexPath.item]
+        cell.titleLabel.text = link?.rel
+        cell.authorLabel.text = link?.href
         return cell
     }
     
