@@ -38,6 +38,7 @@
 		431949F62778BF300023AB63 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949F52778BF300023AB63 /* TodayCell.swift */; };
 		431949F82778D9AB0023AB63 /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949F72778D9AB0023AB63 /* AppFullScreenController.swift */; };
 		431949FA2778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949F92778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift */; };
+		431949FC277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949FB277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift */; };
 		43C2738B274988A80044B67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738A274988A80044B67E /* AppDelegate.swift */; };
 		43C2738D274988A80044B67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738C274988A80044B67E /* SceneDelegate.swift */; };
 		43C2738F274988A80044B67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738E274988A80044B67E /* ViewController.swift */; };
@@ -103,6 +104,7 @@
 		431949F52778BF300023AB63 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 		431949F72778D9AB0023AB63 /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
 		431949F92778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenDescriptionCell.swift; sourceTree = "<group>"; };
+		431949FB277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenHeaderCell.swift; sourceTree = "<group>"; };
 		43C27387274988A80044B67E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2738A274988A80044B67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C2738C274988A80044B67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				431949F52778BF300023AB63 /* TodayCell.swift */,
 				431949F92778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift */,
+				431949FB277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4319488F2758C2DB0023AB63 /* UIView+Layout.swift in Sources */,
+				431949FC277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift in Sources */,
 				431949EE27779B0E0023AB63 /* ReviewCell.swift in Sources */,
 				431949DA277105440023AB63 /* SocialApp.swift in Sources */,
 				431949C4276DF0BE0023AB63 /* AppsPageController.swift in Sources */,
