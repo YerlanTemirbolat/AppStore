@@ -39,6 +39,7 @@
 		431949F82778D9AB0023AB63 /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949F72778D9AB0023AB63 /* AppFullScreenController.swift */; };
 		431949FA2778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949F92778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift */; };
 		431949FC277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949FB277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift */; };
+		431949FE2781C7E80023AB63 /* TodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431949FD2781C7E80023AB63 /* TodayItem.swift */; };
 		43C2738B274988A80044B67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738A274988A80044B67E /* AppDelegate.swift */; };
 		43C2738D274988A80044B67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738C274988A80044B67E /* SceneDelegate.swift */; };
 		43C2738F274988A80044B67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2738E274988A80044B67E /* ViewController.swift */; };
@@ -105,6 +106,7 @@
 		431949F72778D9AB0023AB63 /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
 		431949F92778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenDescriptionCell.swift; sourceTree = "<group>"; };
 		431949FB277A3CAE0023AB63 /* AppFullScreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenHeaderCell.swift; sourceTree = "<group>"; };
+		431949FD2781C7E80023AB63 /* TodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItem.swift; sourceTree = "<group>"; };
 		43C27387274988A80044B67E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C2738A274988A80044B67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C2738C274988A80044B67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				431949D7276E4AD00023AB63 /* AppGroup.swift */,
 				431949D9277105440023AB63 /* SocialApp.swift */,
 				431949EF2778847D0023AB63 /* Reviews.swift */,
+				431949FD2781C7E80023AB63 /* TodayItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				431949F62778BF300023AB63 /* TodayCell.swift in Sources */,
 				43C2738B274988A80044B67E /* AppDelegate.swift in Sources */,
 				431949FA2778DDFE0023AB63 /* AppFullscreenDescriptionCell.swift in Sources */,
+				431949FE2781C7E80023AB63 /* TodayItem.swift in Sources */,
 				431949CA276DF6210023AB63 /* AppsGroupCell.swift in Sources */,
 				431948872752D6460023AB63 /* AppsSearchController.swift in Sources */,
 				431949DC27722FE70023AB63 /* HorizontalSnappingController.swift in Sources */,
