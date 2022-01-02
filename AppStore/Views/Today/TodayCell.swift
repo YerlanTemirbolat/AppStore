@@ -15,6 +15,8 @@ class TodayCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout {
             titleLabel.text = todayItem.title
             imageView.image = todayItem.image
             descriptionLabel.text = todayItem.description
+            
+            backgroundColor = todayItem.backgroundColor
         }
     }
     
@@ -25,6 +27,8 @@ class TodayCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout {
     let imageView = UIImageView(image: #imageLiteral(resourceName: "garden"))
     
     let descriptionLabel = UILabel(text: "All the tools and apps you need to intelligently organize your life the right way.", font: .boldSystemFont(ofSize: 16), numberOfLines: 0)
+    
+    var topConstraint: NSLayoutConstraint!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,7 +48,12 @@ class TodayCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout {
             categoryLabel, titleLabel, imageContainerView, descriptionLabel
         ], spacing: 8)
         addSubview(stackView)
-        stackView.fillSuperview(padding: .init(top: 24, left: 24, bottom: 24, right: 24))
+        
+        stackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 24, bottom: 24, right: 24))
+        self.topConstraint = stackView.topAnchor.constraint(equalTo: topAnchor, constant: 24)
+        self.topConstraint.isActive = true
+        
+        //stackView.fillSuperview(padding: .init(top: 24, left: 24, bottom: 24, right: 24))
     }
     
     required init?(coder: NSCoder) {
