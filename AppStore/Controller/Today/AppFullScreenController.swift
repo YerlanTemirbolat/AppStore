@@ -17,6 +17,10 @@ class AppFullScreenController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+//            layout.scrollDirection = .horizontal
+//        }
+//        
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
@@ -50,7 +54,7 @@ class AppFullScreenController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 450
+            return TodayController.cellSize
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
