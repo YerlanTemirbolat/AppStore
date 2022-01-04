@@ -13,6 +13,9 @@ class TodayMultipleAppCell: BaseTodayCell {
         didSet {
             categoryLabel.text = todayItem.category
             titleLabel.text = todayItem.title
+            
+            multipleAppsController.results = todayItem.apps
+            multipleAppsController.collectionView.reloadData()
         }
     }
     
@@ -20,16 +23,14 @@ class TodayMultipleAppCell: BaseTodayCell {
     
     let titleLabel = UILabel(text: "Utilizing your Time", font: .boldSystemFont(ofSize: 32), numberOfLines: 2)
     
-    let multipleAppsController = UIViewController()
+    let multipleAppsController = TodayMultipleAppsController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .white
         layer.cornerRadius = 16
-        
-        multipleAppsController.view.backgroundColor = .red
-        
+                
         let stackView = VerticalStackView(arrangeSubViews: [
             categoryLabel,
             titleLabel,
