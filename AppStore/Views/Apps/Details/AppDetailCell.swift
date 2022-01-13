@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+
 class AppDetailCell: UICollectionViewCell {
     
     var app: Result! {

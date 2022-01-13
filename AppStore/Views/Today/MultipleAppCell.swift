@@ -27,7 +27,7 @@ class MultipleAppCell: UICollectionViewCell {
     let getButton = UIButton(title: "GET")
     
     let separatorView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor(white: 0.3, alpha: 0.4)
         return view
     }()

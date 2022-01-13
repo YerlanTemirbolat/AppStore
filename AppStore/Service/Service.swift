@@ -19,12 +19,14 @@ class Service {
     }
     
     func fetchTopGrossing(completion: @escaping (AppGroup?, Error?) -> ()) {
+        
        let urlString = "https://rss.applemarketingtools.com/api/v2/us/music/most-played/10/albums.json"
         
         fetchAppGroup(urlString: urlString, completion: completion)
     }
     
     func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()) {
+        
         fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/10/apps.json", completion: completion)
     }
     
@@ -35,11 +37,14 @@ class Service {
     }
     
     func fetchSocialApps(completion: @escaping ([SocialApp]?, Error?) -> Void) {
+        
         let urlString = "https://api.letsbuildthatapp.com/appstore/social"
+        
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
     
     func fetchGenericJSONData<T: Codable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
+        
         guard let url = URL(string: urlString) else { return }
 
         URLSession.shared.dataTask(with: url) { data, response, err in
