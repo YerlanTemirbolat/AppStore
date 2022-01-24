@@ -34,8 +34,9 @@ class CompositionalController: UICollectionViewController {
         super.init(collectionViewLayout: layout)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        return header
     }
     
     static func topSection() -> NSCollectionLayoutSection {
@@ -44,18 +45,29 @@ class CompositionalController: UICollectionViewController {
         item.contentInsets.trailing = 16
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(300)), subitems: [item])
+        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets.leading = 32
+        section.contentInsets.leading = 16
+        
+        let kind = UICollectionView.elementKindSectionHeader
+        section.boundarySupplementaryItems = [
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: kind, alignment: .bottom)
+        ]
+        
         return section
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        4
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 17
+        return 12
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,19 +77,36 @@ class CompositionalController: UICollectionViewController {
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "smallCellId", for: indexPath)
-            cell.backgroundColor = .blue
             return cell
         }
-        
     }
+    
+    class CompositionalHeader: UICollectionReusableView {
+        
+        let label = UILabel(text: "Editor's Choise Games", font: .boldSystemFont(ofSize: 32), numberOfLines: 0)
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            addSubview(label)
+            label.fillSuperview()
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    
+    let headerId = "headerId"
+    let smallCellId = "smallCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         navigationItem.title = "Apps"
         navigationController?.navigationBar.prefersLargeTitles = true
+        collectionView.register(CompositionalHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "smallCellId")
+        collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: smallCellId)
     }
 }
 
@@ -92,7 +121,6 @@ struct AppsView: UIViewControllerRepresentable {
     }
     
     typealias UIViewControllerType = UIViewController
-    
     
 }
 
