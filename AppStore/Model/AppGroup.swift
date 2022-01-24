@@ -16,7 +16,7 @@ struct Feed: Codable {
     let results: [FeedResult]
 }
 
-struct FeedResult: Codable {
+struct FeedResult: Codable, Hashable {
     let id: String
     let name: String
     let artistName: String

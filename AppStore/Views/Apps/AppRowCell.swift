@@ -9,6 +9,15 @@ import UIKit
 
 class AppRowCell: UICollectionViewCell {
     
+    var app: Result! {
+        didSet {
+            nameLabel.text = app?.trackName
+            companyLabel.text = app?.releaseNotes
+            imageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+            getButton.setTitle(app?.formattedPrice, for: .normal)
+        }
+    }
+    
     let imageView = UIImageView(cornerRadius: 8)
     
     var nameLabel = UILabel(text: "App Name", font: .systemFont(ofSize: 20), numberOfLines: 0)
