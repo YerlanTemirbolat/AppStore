@@ -177,6 +177,11 @@ class CompositionalController: UICollectionViewController {
         return nil
     }
     
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let appDetailController = AppDetailController(appId: "")
+//        navigationController?.pushViewController(appDetailController, animated: true)
+//    }
+    
     private func setupDiffableDatasource() {
         
         collectionView.dataSource = diffableDataSource
