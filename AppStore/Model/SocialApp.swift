@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct SocialApp: Codable {
+struct SocialApp: Codable, Hashable {
     let id, name, imageUrl, tagline: String
 }

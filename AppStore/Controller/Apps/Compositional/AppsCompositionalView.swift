@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 class CompositionalController: UICollectionViewController {
     
     fileprivate let cellId = "cellId"
@@ -150,9 +151,33 @@ class CompositionalController: UICollectionViewController {
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: smallCellId)
         
-        fetchApps()
+        //fetchApps()
+        setupDiffableDatasource()
+    }
+    
+    enum AppSection {
+        case topSocial
+        case grossing
+    }
+    
+    lazy var diffableDataSource: UICollectionViewDiffableDataSource<AppSection, SocialApp> = .init(collectionView: self.collectionView) { (collectionView, indexPath, socialApp) -> UICollectionViewCell? in
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! AppsHeaderCell
+        cell.app = socialApp
+        return cell
+    }
+    
+    private func setupDiffableDatasource() {
+        
+        collectionView.dataSource = diffableDataSource
+        Service.shared.fetchSocialApps { socialApps, err in
+            var snapshot = self.diffableDataSource.snapshot()
+            snapshot.appendSections([.topSocial])
+            snapshot.appendItems(socialApps ?? [], toSection: .topSocial)
+            //self.diffableDataSource.apply(snapshot)
+        }
     }
 }
+
 
 struct AppsView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<AppsView>) -> UIViewController {
