@@ -22,7 +22,6 @@ class SearchResultCell: UICollectionViewCell {
             
             if appResult.screenshotUrls!.count > 1 {
                 screenshot2ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls![1]))
-
             }
             
             if appResult.screenshotUrls!.count > 2 {

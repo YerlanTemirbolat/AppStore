@@ -175,14 +175,6 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout, U
         // 4 anchors
         
         let anchoredConstraints = fullscreenView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: startingFrame.origin.y, left: startingFrame.origin.x, bottom: 0, right: 0), size: .init(width: startingFrame.width, height: startingFrame.height))
-//
-//        fullscreenView.translatesAutoresizingMaskIntoConstraints = false
-//        topConstraint = fullscreenView.topAnchor.constraint(equalTo: view.topAnchor, constant: startingFrame.origin.y)
-//        leadingConstraint = fullscreenView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: startingFrame.origin.x)
-//        widthConstraint = fullscreenView.widthAnchor.constraint(equalToConstant: startingFrame.width)
-//        heightConstraint = fullscreenView.heightAnchor.constraint(equalToConstant: startingFrame.height)
-//
-//        [topConstraint, leadingConstraint, widthConstraint, heightConstraint].forEach { $0?.isActive = true }
         
         self.view.layoutIfNeeded()
     }
